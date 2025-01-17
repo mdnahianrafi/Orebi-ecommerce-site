@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    overflow-x: hidden;
+}
+/* Hide default slick arrows */
+.slick-next:before {
+    content: ' ' ! important;
+}
+.slick-prev:before {
+    content: ' ' !important;
+}
+
+  
+.half-border::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Start the border at the middle */
+    width: 50%; /* Half-width */
+    height: 2px; /* Border thickness */
+    background-color: black; /* Use the element's text color */
+    transform: translateX(-50%);
+  }
+
+
+  /* Style the checkbox */
+  input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid gray;
+      background-color: white;
+      position: relative;
+  }
+
+  /* Add the gray effect using a pseudo-element */
+  input[type="checkbox"]::after {
+      content: "";
+      position: absolute;
+      top: 15%; /* Start slightly below the top */
+      left: 18%; /* Leave space on the left */
+      width: 70%; /* Cover 70% horizontally */
+      height: 70%; /* Cover 70% vertically */
+      background-color: transparent; /* Default color */
+      transition: background-color 0.3s ease;
+  }
+
+  /* Change the color when checked */
+  input[type="checkbox"]:checked::after {
+      background-color: gray;
+  }
+
+
+  
+  /* @layer Utilities */
+@layer utilities {
+    .popup {
+        clip-path: polygon(7% 15%, 9% 33%, 100% 33%, 100% 100%, 0 100%, 0 35%, 5% 34%);
+  }
+}
+ 
+
+
+
+.vertical-range-bar {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    border-radius: 5px;
+  }
+  
+  .vertical-range-bar div {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .vertical-range-bar span {
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+  }
+  
+
+  
+
+
+  
+
+  
