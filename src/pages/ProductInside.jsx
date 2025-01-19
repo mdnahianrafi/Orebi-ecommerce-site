@@ -11,12 +11,13 @@ import Headphone from "../assets/images/Headphones big.png";
 import { RiStarSFill } from "react-icons/ri";
 import QuantityBox from "../components/QuantityBox";
 import { FaPlus } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ProductInside = () => {
   return (
     <div>
       <Container>
-        <Flex className='pt-8'>
+        {/* <Flex className='pt-8'>
           <Heading
             as="h3"
             text="Home"
@@ -28,8 +29,40 @@ const ProductInside = () => {
             text="Products"
             className="text-base font-dm text-menuText"
           />
-        </Flex>
+        </Flex> */}
 
+<div className="pt-8 breadcrumbs">
+            <ul>
+              <li>
+                <Link to="/">
+                  <Heading
+                    as="h3"
+                    text="Home"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/shop">
+                  <Heading
+                    as="h3"
+                    text="Products"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+              <li>
+                <Link to="/product-description">
+                  <Heading
+                    as="h3"
+                    text="Description"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
         <Flex className="pt-32 gap-x-10">
           <Image imgSrc={Basket} imgAlt={"basket.png"} />
           <Image imgSrc={Sunglasses} imgAlt={"Sunglasses big.png"} />

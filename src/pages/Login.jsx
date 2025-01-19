@@ -3,6 +3,7 @@ import Container from "../components/Container";
 import Heading from "../components/Heading";
 import Flex from "../components/Flex";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const Login = () => {
           text="Login"
           className="pt-32 pb-8 text-3xl font-bold sm:text-3xl md:text-4xl lg:text-5xl font-dm"
         />
-        <Flex>
+        {/* <Flex>
           <Heading
             as="h3"
             text="Home"
@@ -24,7 +25,30 @@ const Login = () => {
             text="Login"
             className="text-sm sm:text-base font-dm text-menuText "
           />
-        </Flex>
+        </Flex> */}
+                  <div className="breadcrumbs">
+            <ul>
+              <li>
+                <Link to="/">
+                  <Heading
+                    as="h3"
+                    text="Home"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/login">
+                  <Heading
+                    as="h3"
+                    text="Login"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
 
         <Heading
           as="h3"

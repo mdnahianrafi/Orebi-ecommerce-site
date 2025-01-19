@@ -6,7 +6,7 @@ import Heading from "../components/Heading";
 import Image from "../components/Image";
 import BigSpeaker from '../assets/images/speaker Image_with_button_1.png';
 import BigBasket from '../assets/images/laundrey basket Image_with_button_2.png';
-
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
@@ -16,7 +16,7 @@ const About = () => {
             text="Home"
             className="pt-32 pb-8 text-2xl font-bold md:text-4xl font-dm"
           />
-        <Flex>
+        {/* <Flex>
           <Heading
             as="h3"
             text="Home"
@@ -28,8 +28,30 @@ const About = () => {
             text="About"
             className="text-base font-dm text-menuText"
           />
-        </Flex>
+        </Flex> */}
+          <div className="breadcrumbs">
+            <ul>
+              <li>
+                <Link to="/">
+                  <Heading
+                    as="h3"
+                    text="Home"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
 
+              <li>
+                <Link to="/About">
+                  <Heading
+                    as="h3"
+                    text="About"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
         <Flex className={'pt-32 gap-x-11'}>
           <Image imgSrc={BigSpeaker} imgAlt={'speaker Image_with_button_1.png'}/>
           <Image imgSrc={BigBasket} imgAlt={'laundrey basket Image_with_button_2.png'}/>

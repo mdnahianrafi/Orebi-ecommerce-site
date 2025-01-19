@@ -18,7 +18,7 @@ const Checkout = () => {
           text="Checkout"
           className="pt-32 pb-8 text-3xl font-bold sm:text-3xl md:text-4xl lg:text-5xl font-dm"
         />
-        <Flex>
+        {/* <Flex>
           <Heading
             as="h3"
             text="Home"
@@ -30,7 +30,30 @@ const Checkout = () => {
             text="Checkout"
             className="text-sm sm:text-base font-dm text-menuText "
           />
-        </Flex>
+        </Flex> */}
+                  <div className="breadcrumbs">
+            <ul>
+              <li>
+                <Link to="/">
+                  <Heading
+                    as="h3"
+                    text="Home"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/checkout">
+                  <Heading
+                    as="h3"
+                    text="Checkout"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
         <Heading
           as="h3"
           text={

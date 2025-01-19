@@ -3,7 +3,7 @@ import Container from '../components/Container';
 import Flex from '../components/Flex';
 import Heading from '../components/Heading';
 import { MdKeyboardArrowRight } from "react-icons/md";
-
+import { Link } from 'react-router-dom';
 const Contacts = () => {
   return (
     <>
@@ -16,7 +16,7 @@ const Contacts = () => {
         />
         
         {/* Breadcrumb */}
-        <Flex className="justify-start">
+        {/* <Flex className="justify-start">
           <Heading 
             as="h3" 
             text="Home" 
@@ -28,7 +28,30 @@ const Contacts = () => {
             text="Contacts" 
             className="text-sm sm:text-base font-dm text-menuText"
           />
-        </Flex>
+        </Flex> */}
+                  <div className="breadcrumbs">
+            <ul>
+              <li>
+                <Link to="/">
+                  <Heading
+                    as="h3"
+                    text="Home"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/shop">
+                  <Heading
+                    as="h3"
+                    text="Contacts"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
 
         {/* Form Title */}
         <Heading 

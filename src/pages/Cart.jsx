@@ -17,7 +17,7 @@ const Cart = () => {
           text="Cart"
           className="pt-32 pb-8 text-3xl font-bold md:text-3xl xl:text-4xl lg:text-5xl font-dm"
         />
-        <Flex>
+        {/* <Flex>
           <Heading
             as="h3"
             text="Home"
@@ -29,7 +29,30 @@ const Cart = () => {
             text="Cart"
             className="text-sm md:text-base font-dm text-menuText "
           />
-        </Flex>
+        </Flex> */}
+                  <div className="breadcrumbs">
+            <ul>
+              <li>
+                <Link to="/">
+                  <Heading
+                    as="h3"
+                    text="Home"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/cart">
+                  <Heading
+                    as="h3"
+                    text="Cart"
+                    className="text-base font-bold font-dm text-menuText"
+                  />
+                </Link>
+              </li>
+            </ul>
+          </div>
 
         <Flex className="mt-28 md:mt-[140px] pt-10 md:pt-8  bg-categoryColor justify-between px-8 md:px-32 pb-4">
           <Heading
